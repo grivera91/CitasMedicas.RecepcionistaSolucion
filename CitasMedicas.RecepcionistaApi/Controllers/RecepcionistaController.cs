@@ -22,7 +22,7 @@ namespace CitasMedicas.RecepcionistaApi.Controllers
             _correlativoService = correlativoService;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public async Task<IActionResult> RegistrarRecepcionista([FromBody] RecepcionistaRequestDto recepcionistaRequestDto)
         {
@@ -78,7 +78,7 @@ namespace CitasMedicas.RecepcionistaApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPatch("{id}")]
         public async Task<IActionResult> EditarRecepcionista(int id, [FromBody] RecepcionistaRequestDto recepcionistaRequestDto)
         {
@@ -121,7 +121,7 @@ namespace CitasMedicas.RecepcionistaApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<RecepcionistaResponseDto>> ObtenerRecepcionista(int id)
         {
@@ -147,7 +147,7 @@ namespace CitasMedicas.RecepcionistaApi.Controllers
             return Ok(recepcionista);
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<RecepcionistaResponseDto>>> ObtenerCitasMedicas()
         {
